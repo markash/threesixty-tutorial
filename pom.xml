@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.threesixty.tutorial</groupId>
+    <artifactId>tutorial</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1.0</version>
+
+    <properties>
+        <concordion.version>2.1.0</concordion.version>
+        <cucumber.version>1.2.5</cucumber.version>
+
+
+        <java.version>1.8</java.version>
+        <jbehave.version>4.1</jbehave.version>
+        <junit.version>4.12</junit.version>
+
+        <project.build.encoding>UTF-8</project.build.encoding>
+        <project.build.target>1.8</project.build.target>
+        <project.build.source>1.8</project.build.source>
+
+        <spring.version>4.3.6.RELEASE</spring.version>
+        <spring-boot.version>1.5.2.RELEASE</spring-boot.version>
+        <spring-security.version>4.1.3.RELEASE</spring-security.version>
+        <slf4j.version>1.7.10</slf4j.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <encoding>${project.build.encoding}</encoding>
+                        <target>${project.build.target}</target>
+                        <source>${project.build.source}</source>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <encoding>${project.build.encoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>apache-commons-text</module>
+    </modules>
+</project>
